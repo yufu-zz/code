@@ -22,6 +22,9 @@ def init():
 	glutCreateWindow('Points')
 	glClearColor(0.0, 0.0, 0.0, 0.0)
 	glShadeModel(GL_FLAT)
+	glutDisplayFunc(display)
+	glutReshapeFunc(reshape)
+	glutMainLoop()
 
 def draw_point(point):
 	glBegin(GL_POINTS)
@@ -57,7 +60,4 @@ def reshape(w, h):
 
 if __name__ == '__main__':
 	init()
-	glutDisplayFunc(display)
-	glutReshapeFunc(reshape)
-#	glutMouseFunc(mouse)
-	glutMainLoop()
+
